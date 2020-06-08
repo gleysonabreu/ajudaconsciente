@@ -8,6 +8,8 @@ import WelcomeDoador from './Pages/WelcomeDoador';
 import WelcomeUser from './Pages/WelcomeUser';
 import ListItemsUser from './Pages/ListItemsUser';
 import CartUser from './Pages/CartUser';
+import Endereco from './Pages/Endereco';
+import ProductList from './Pages/ProductList';
 const AppStack = createStackNavigator();
 
 
@@ -23,6 +25,8 @@ export default function Routes(){
         <AppStack.Screen name="WelcomeUser" component={WelcomeUser}/>
         <AppStack.Screen name="ListItemsUser" component={ListItemsUser} />
         <AppStack.Screen name="CartUser" component={CartUser} />
+        <AppStack.Screen name="Endereço" component={Endereco} />
+        <AppStack.Screen name="ProductList" component={ProductList} />
       </AppStack.Navigator>
     </NavigationContainer>
   );

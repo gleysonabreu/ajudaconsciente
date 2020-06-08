@@ -67,7 +67,11 @@ function CartUser() {
           </View>
         )}
         />
-          <TouchableOpacity style={styles.button}><Text>Finalizar</Text></TouchableOpacity>
+          <TouchableOpacity
+          onPress={() => navigation.navigate('Endereço', cart)}
+          style={styles.button}>
+            <Text>Finalizar</Text>
+          </TouchableOpacity>
       </View>
     </View>
   );

@@ -4,6 +4,14 @@ import { useNavigation, useRoute } from '@react-navigation/native';
 import styles from './styles';
 import { Feather } from '@expo/vector-icons';
 
+import {
+  Menu,
+  MenuProvider,
+  MenuOptions,
+  MenuOption,
+  MenuTrigger,
+} from 'react-native-popup-menu';
+
 import alcoolgel from '../../images/alcoolgel.jpg';
 import arroz from '../../images/arroz.jpg';
 import carne from '../../images/carne.jpg';
@@ -69,10 +77,10 @@ function ListItemsUser() {
   }, []);
 
   return (
+    <MenuProvider>
     <View style={styles.container}>
       <View style={styles.header}>
         <View style={styles.headerBack}>
-          <TouchableOpacity onPress={() => navigation.goBack()}><Feather size={25} name="arrow-left" color="#E61610" /></TouchableOpacity>
           <Text style={styles.headerText}>Lista de Produtos</Text>
         </View>
         <TouchableOpacity
@@ -83,6 +91,16 @@ function ListItemsUser() {
         >
           <Text style={styles.cartText}>{cart.length}<Feather name="shopping-cart" size={16} color="#000"/> </Text>
         </TouchableOpacity>
+        <Menu>
+          <MenuTrigger><Feather name="menu" size={25} /></MenuTrigger>
+          <MenuOptions>
+            <MenuOption text='One' onSelect={() => navigation.navigate('WelcomeUser')} />
+            <MenuOption>
+              <Text style={{color: 'red'}}>Two</Text>
+            </MenuOption>
+            <MenuOption value={3} disabled={true} text='Three' />
+          </MenuOptions>
+        </Menu>
       </View>
 
       <View style={styles.contentPage}>
@@ -120,6 +138,7 @@ function ListItemsUser() {
       </View>
 
     </View>
+    </MenuProvider>
   );
 }
 
