@@ -6,7 +6,6 @@ export default StyleSheet.create({
     flex: 1,
     paddingHorizontal: 15,
     paddingTop: Constants.statusBarHeight + 20,
-    backgroundColor: "#FFF"
   },
   header:{
     flexDirection: "row",
@@ -35,20 +34,54 @@ export default StyleSheet.create({
     alignItems: "center",
     padding: 10,
     borderRadius: 15,
-    marginBottom: 30,
+    marginTop: 15,
+    marginBottom: 15,
+    textAlign: 'center'
   },
-  textButton: {
-    fontSize: 17,
+  buttonText: {
+    fontSize: 18,
     color: "#FFF",
-    textTransform: 'uppercase',
     fontWeight: "bold"
   },
-  input: {
-    marginBottom: 10,
-    backgroundColor: "#e0e0e0",
-    width: 300,
-    padding: 10,
-    borderRadius: 15,
-    fontSize: 17
+  contentPage: {
+    flex: 1,
+    marginTop: 5,
+    justifyContent: 'center',
+    alignItems: "center"
+  },
+  productList: {
+    marginTop: 10,
+    flex: 1,
+  },
+  product: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: "center",
+    marginBottom: 12,
+    backgroundColor: "#EDEDED",
+    padding: 25,
+    borderRadius: 16
+  },
+  productImage: {
+    width: 70,
+    height: 70,
+    borderRadius: 15
+  },
+  productText: {
+    fontSize: 17,
+    fontWeight: 'bold',
+  },
+  groupCart: {
+    marginLeft: 10
+  },
+  action: {
+    marginLeft: 10,
+    flexDirection: 'row',
+  },
+  titleCart: {
+    fontSize: 24,
+    marginTop: 25,
+    bottom: 15,
+    textAlign: 'center'
   },
 });

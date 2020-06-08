@@ -2,6 +2,7 @@ import { StyleSheet } from 'react-native';
 import Constants from 'expo-constants';
 
 export default StyleSheet.create({
+  
   container: {
     flex: 1,
     paddingHorizontal: 15,
@@ -10,13 +11,18 @@ export default StyleSheet.create({
   },
   header:{
     flexDirection: "row",
-    justifyContent: "space-between",
     alignItems: "center",
   },
   headerText: {
     fontSize: 20,
     fontWeight: 'bold',
     marginStart: 5
+  },
+  buttonText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginStart: 5,
+    color: "#FFF"
   },
   headerBack: {
     flexDirection: "row",
@@ -26,8 +32,16 @@ export default StyleSheet.create({
     flex: 1,
     marginTop: 20,
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    padding: 10
   },
+
+  textLight: {
+    fontSize: 22,
+    color: "#333333",
+    textAlign: 'center'
+  },
+
   button:{
     backgroundColor: '#E61610',
     width: 200,
@@ -35,20 +49,12 @@ export default StyleSheet.create({
     alignItems: "center",
     padding: 10,
     borderRadius: 15,
-    marginBottom: 30,
+    marginTop: 30,
   },
-  textButton: {
-    fontSize: 17,
-    color: "#FFF",
-    textTransform: 'uppercase',
-    fontWeight: "bold"
+
+  icon: {
+    height: 45,
+    width: 50
   },
-  input: {
-    marginBottom: 10,
-    backgroundColor: "#e0e0e0",
-    width: 300,
-    padding: 10,
-    borderRadius: 15,
-    fontSize: 17
-  },
+
 });

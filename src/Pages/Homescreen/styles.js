@@ -6,6 +6,7 @@ export default StyleSheet.create({
     flex: 1,
     paddingHorizontal: 15,
     paddingTop: Constants.statusBarHeight + 20,
+    backgroundColor: "#FFF"
   },
   header:{
     flexDirection: "row",

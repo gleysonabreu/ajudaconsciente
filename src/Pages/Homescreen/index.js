@@ -27,7 +27,7 @@ function Homescreen(){
           <Text style={styles.textButton}>Doador</Text>
         </TouchableOpacity>
         <View style={styles.menuLogin}>
-        <Text>Já tem um conta? </Text>
+        <Text>Já tem uma conta? </Text>
         <TouchableOpacity onPress={() => navigation.navigate('Login')}><Text style={styles.loginText}>Faça login</Text></TouchableOpacity>
         </View>
       </View>

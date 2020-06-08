@@ -24,9 +24,9 @@ export default StyleSheet.create({
   },
   contentPage: {
     flex: 1,
-    marginTop: 20,
+    marginTop: 5,
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
   },
   button:{
     backgroundColor: '#E61610',
@@ -35,25 +35,52 @@ export default StyleSheet.create({
     alignItems: "center",
     padding: 10,
     borderRadius: 15,
-    marginBottom: 30,
+    marginTop: 10
   },
-  textButton: {
-    fontSize: 17,
+  buttonText: {
+    fontSize: 18,
     color: "#FFF",
-    textTransform: 'uppercase',
     fontWeight: "bold"
   },
-  input: {
-    marginBottom: 10,
-    backgroundColor: "#e0e0e0",
-    width: 300,
-    padding: 10,
-    borderRadius: 15,
-    fontSize: 17
+  productList: {
+    marginTop: 10,
+    flex: 1
   },
-  eating: {
+  product: {
+    padding: 24,
+    borderRadius: 15,
+    backgroundColor: "#EDEDED",
+    marginBottom: 16,
+    flexDirection: 'column',
+    alignItems: 'center',
+    shadowColor: "#000",
+    shadowOffset: {width: 0, height: 2},
+    shadowOpacity: 0.8,
+    shadowRadius: 15,
+    elevation: 1,
+    width: 300
+  },
+  productImage: {
     height: 200,
     width: 200,
-    marginBottom: 15
+    borderRadius: 15
+  },
+  productName: {
+    fontSize: 17,
+    marginBottom: 5
+  },
+  cart: {
+    flexDirection: 'row',
+    alignItems: "center"
+  },
+  cartText: {
+    fontSize: 16,
+    backgroundColor: "#E61610",
+    padding: 10,
+    marginRight: 5,
+    borderRadius: 30,
+    color: "#FFF",
+    fontWeight: 'bold',
+    alignItems: "center",
   },
 });
