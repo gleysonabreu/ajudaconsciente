@@ -15,6 +15,12 @@ function ProductList(){
     setProducts([
       {
         idBuy: 2,
+        date: '08/06/2020 10:56:10',
+        buyersData: {
+          name: "Hudson",
+          email: "hudson@gmail.com",
+          cpf: 123456789,
+        },
         location: {
           endereco: "Rua V",
           numero: 123,
@@ -28,9 +34,36 @@ function ProductList(){
           {
             image: arroz,
             name: "Arroz",
-            amount: 1,
+            amount: 5,
             id: 1
           },
+        ],
+        truck: [
+          {
+            id: 1,
+            date: '08/06/2020 11:01:10',
+            action: "APROVADO"
+          },
+          {
+            id: 2,
+            date: '08/06/2020 13:56:10',
+            action: "SEPRADO PELO ESTOQUE"
+          },
+          {
+            id: 3,
+            date: '08/06/2020 15:50:00',
+            action: "ENTREGUE A TRANSPORTADORA"
+          },
+          {
+            id: 4,
+            date: '09/06/2020 10:00:00',
+            action: "EM ROTA DE ENTREGA"
+          },
+          {
+            id: 5,
+            date: '09/06/2020 17:50:55',
+            action: "ENTREGUE"
+          }
         ]
       }
     ]);
@@ -55,7 +88,9 @@ function ProductList(){
           renderItem={({ item: product }) => (
             <View style={styles.product}>
               <Text><Text style={styles.text}>ID da compra:</Text> <Text style={styles.textId}>{product.idBuy}</Text></Text>
-              <TouchableOpacity style={styles.button}><Text style={styles.buttonText}>Ver detalhes</Text></TouchableOpacity>
+              <TouchableOpacity
+              onPress={() => navigation.navigate('Detail', {products})}
+              style={styles.button}><Text style={styles.buttonText}>Ver detalhes</Text></TouchableOpacity>
             </View>
           )}
           />

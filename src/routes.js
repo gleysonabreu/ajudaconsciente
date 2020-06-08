@@ -10,6 +10,7 @@ import ListItemsUser from './Pages/ListItemsUser';
 import CartUser from './Pages/CartUser';
 import Endereco from './Pages/Endereco';
 import ProductList from './Pages/ProductList';
+import Detail from './Pages/Detail';
 const AppStack = createStackNavigator();
 
 
@@ -27,6 +28,7 @@ export default function Routes(){
         <AppStack.Screen name="CartUser" component={CartUser} />
         <AppStack.Screen name="Endereço" component={Endereco} />
         <AppStack.Screen name="ProductList" component={ProductList} />
+        <AppStack.Screen name="Detail" component={Detail} />
       </AppStack.Navigator>
     </NavigationContainer>
   );
