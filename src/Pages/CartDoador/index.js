@@ -4,7 +4,7 @@ import { useRoute, useNavigation } from '@react-navigation/native';
 import { Feather } from '@expo/vector-icons'
 import styles from './styles';
 
-function CartUser() {
+function CartDoador() {
   const route = useRoute();
   const navigation = useNavigation();
   const [cart, setCart] = useState(route.params);
@@ -39,7 +39,7 @@ function CartUser() {
     <View style={styles.container}>
       <View style={styles.header}>
         <View style={styles.headerBack}>
-          <TouchableOpacity onPress={() => navigation.navigate("ListItemsUser")}><Feather size={25} name="arrow-left" color="#E61610" /></TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate("ListItemDoador")}><Feather size={25} name="arrow-left" color="#E61610" /></TouchableOpacity>
           <Text style={styles.headerText}>Carrinho</Text>
         </View>
       </View>
@@ -68,7 +68,7 @@ function CartUser() {
         )}
         />
           <TouchableOpacity
-          onPress={() => navigation.navigate('Endereço', cart)}
+          onPress={() => navigation.navigate('EnderecoDoador', cart)}
           style={styles.button}>
             <Text style={styles.buttonText}>Finalizar</Text>
           </TouchableOpacity>
@@ -77,4 +77,4 @@ function CartUser() {
   );
 }
 
-export default CartUser;
+export default CartDoador;

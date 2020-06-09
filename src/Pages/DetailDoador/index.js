@@ -4,7 +4,7 @@ import { useNavigation, useRoute } from '@react-navigation/native';
 import styles from './styles';
 import { Feather } from '@expo/vector-icons';
 
-function Detail(){
+function DetailDoador(){
 
   const navigation = useNavigation();
   const route = useRoute();
@@ -18,7 +18,7 @@ function Detail(){
         <View style={styles.header}>
           <View style={styles.headerBack}>
             <TouchableOpacity onPress={() => navigation.goBack()}><Feather size={25} name="arrow-left" color="#E61610" /></TouchableOpacity>
-            <Text style={styles.headerText}>Meu pedido</Text>
+            <Text style={styles.headerText}>Minha doação</Text>
           </View>
         </View>
 
@@ -26,7 +26,7 @@ function Detail(){
           <View style={styles.pageDiv}>
             <Feather name="shopping-bag" color="#73c300" size={35}/>
             <View style={styles.pageDivColumn}>
-              <Text style={styles.pageDivColumnTitle}>Nº do pedido</Text>
+              <Text style={styles.pageDivColumnTitle}>Nº da doação</Text>
               <Text style={styles.npedido}>#{product.idBuy}</Text>
               </View>
             <View style={styles.pageDivColumn}>
@@ -34,7 +34,7 @@ function Detail(){
               <Text style={styles.datepedido}>10/05/2020 10:20:51</Text>
               </View>
           </View>
-            <Text style={styles.titleEntryDiv}>DADOS DO CLIENTE</Text>
+            <Text style={styles.titleEntryDiv}>DADOS DO DOADOR</Text>
 
           <View style={styles.pageDiv}>
             <Feather name="user" color="#73c300" size={35}/>
@@ -45,7 +45,7 @@ function Detail(){
             </View>
             <View></View>
           </View>
-            <Text style={styles.titleEntryDiv}>DADOS ENTREGA</Text>
+            <Text style={styles.titleEntryDiv}>DADOS DA RETIRADA</Text>
           <View style={styles.pageDiv}>
             <Feather name="map-pin" color="#73c300" size={35}/>
             <View style={styles.pageDivColumn}>
@@ -58,7 +58,7 @@ function Detail(){
             </View>
             <View></View>
           </View>
-            <Text style={styles.titleEntryDiv}>ITENS DO PEDIDO</Text>
+            <Text style={styles.titleEntryDiv}>ITENS A SEREM DOADOS</Text>
           <View style={styles.pageDiv}>
             <Feather name="shopping-cart" color="#73c300" size={35}/>
             <View style={styles.pageDivColumn}>
@@ -91,4 +91,4 @@ function Detail(){
   );
 }
 
-export default Detail;
+export default DetailDoador;

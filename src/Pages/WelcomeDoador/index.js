@@ -30,7 +30,9 @@ function WelcomeDoador() {
           equipamentos de proteção e prevenção contra a COVID-19.
         </Text>
         <Text style={styles.headerText}>O que vai querer doar hoje?</Text>
-        <TouchableOpacity style={styles.button}><Text style={styles.buttonText}>DOAR</Text></TouchableOpacity>
+        <TouchableOpacity
+        onPress={() => navigation.navigate('ListItemDoador')}
+        style={styles.button}><Text style={styles.buttonText}>DOAR</Text></TouchableOpacity>
       </View>
 
     </View>
