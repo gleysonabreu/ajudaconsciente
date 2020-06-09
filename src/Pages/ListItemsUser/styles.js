@@ -83,4 +83,23 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     alignItems: "center",
   },
+  menu: {
+    flexDirection: 'row',
+    alignItems: "center"
+  },
+  textMenu: {
+    fontSize: 16,
+    marginLeft: 5
+  },
+  menuList: {
+    padding: 10
+  },
+  menuItem: {
+    backgroundColor: "#EDEDED",
+    marginBottom: 5,
+    borderRadius: 15,
+    flexDirection: 'row',
+    alignItems: "center",
+    justifyContent: 'flex-start'
+  },
 });

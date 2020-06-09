@@ -24,7 +24,7 @@ function Endereco(){
 
   const handleBuy = () => {
 
-    navigation.navigate("ProductList");
+    navigation.navigate("Successfuly");
         
   }
 

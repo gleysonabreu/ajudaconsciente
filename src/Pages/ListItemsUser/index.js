@@ -83,24 +83,39 @@ function ListItemsUser() {
         <View style={styles.headerBack}>
           <Text style={styles.headerText}>Lista de Produtos</Text>
         </View>
-        <TouchableOpacity
-        style={styles.cart}
-        onPress={() => {
-          navigation.navigate('CartUser', cart);
-        }}
-        >
-          <Text style={styles.cartText}>{cart.length}<Feather name="shopping-cart" size={16} color="#000"/> </Text>
-        </TouchableOpacity>
-        <Menu>
-          <MenuTrigger><Feather name="menu" size={25} /></MenuTrigger>
-          <MenuOptions>
-            <MenuOption text='One' onSelect={() => navigation.navigate('WelcomeUser')} />
-            <MenuOption>
-              <Text style={{color: 'red'}}>Two</Text>
-            </MenuOption>
-            <MenuOption value={3} disabled={true} text='Three' />
-          </MenuOptions>
-        </Menu>
+        
+        <View style={styles.menu}>
+          <TouchableOpacity
+          style={styles.cart}
+          onPress={() => {
+            navigation.navigate('CartUser', cart);
+          }}
+          >
+            <Text style={styles.cartText}>{cart.length}<Feather name="shopping-cart" size={16} color="#000"/> </Text>
+          </TouchableOpacity>
+          <Menu style={{ borderRadius: 16 }}>
+            <MenuTrigger><Feather name="more-vertical" size={25} /></MenuTrigger>
+            <MenuOptions style={styles.menuList}>
+              <MenuOption style={styles.menuItem} onSelect={() => navigation.navigate("ListItemsUser")}>
+                <Feather name="home" size={15} />
+                <Text style={styles.textMenu}>Inicio</Text>
+              </MenuOption>
+              <MenuOption style={styles.menuItem} onSelect={() => navigation.navigate("ProductList")}>
+                <Feather name="list" size={15} />
+                <Text style={styles.textMenu}>Pedidos</Text>
+              </MenuOption>
+              <MenuOption style={styles.menuItem} onSelect={() => navigation.navigate("Profile")}>
+                <Feather name="user" size={15} />
+                <Text style={styles.textMenu}>Meu Perfil</Text>
+              </MenuOption>
+              <MenuOption style={styles.menuItem} onSelect={() => navigation.navigate("Tela Incial")}>
+                <Feather name="log-out" size={15} />
+                <Text style={styles.textMenu}>Sair</Text>
+              </MenuOption>
+            </MenuOptions>
+          </Menu>
+        </View>
+
       </View>
 
       <View style={styles.contentPage}>

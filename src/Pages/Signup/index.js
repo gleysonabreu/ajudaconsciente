@@ -13,7 +13,7 @@ function Signup(){
       <View style={styles.header}>
         <View style={styles.headerBack}>
           <TouchableOpacity onPress={() => navigation.goBack()}><Feather size={25} name="arrow-left" color="#E61610" /></TouchableOpacity>
-          <Text style={styles.headerText}>{route.name}</Text>
+          <Text style={styles.headerText}>Cadastro</Text>
         </View>
       </View>
 
@@ -22,9 +22,12 @@ function Signup(){
         <Image style={styles.eating} source={eating_together} />
         <TextInput style={styles.input} placeholder={`Digite seu nome completo`} />
         <TextInput style={styles.input} placeholder={`Digite seu email`} />
+        <TextInput style={styles.input} placeholder={`Digite sua data de nascimento`} />
         <TextInput keyboardType="default" secureTextEntry={true} style={styles.input} placeholder={`Digite sua senha`} />
         <TextInput style={styles.input} placeholder={`Digite seu cpf/cnpj`} />
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity
+        onPress={() => navigation.navigate('Login')}
+        style={styles.button}>
           <Text style={styles.textButton}>Cadastrar</Text>
         </TouchableOpacity>
       </View>
